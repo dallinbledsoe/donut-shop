@@ -60,7 +60,7 @@ def add_donut():
 
 
 # Endpoint to query all donuts
-@app.route("/donut", methods=["GET"])
+@app.route("/donuts", methods=["GET"])
 def get_donuts():
     all_donuts = Donut.query.all()
     result = donuts_schema.dump(all_donuts)
