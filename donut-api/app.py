@@ -34,7 +34,7 @@ class Donut(db.Model):
 
 class DonutSchema(ma.Schema):
     class Meta:
-        fields = ('name', 'quantity', 'price', 'description', 'image_url')
+        fields = ('id', 'name', 'quantity', 'price', 'description', 'image_url')
 
 
 donut_schema = DonutSchema()
@@ -43,13 +43,14 @@ donuts_schema = DonutSchema(many=True)
 # Endpoint to create a new donut
 @app.route('/donut', methods=["POST"])
 def add_donut():
+    id = request.json['id']
     name = request.json['name']
     quantity = request.json['quantity']
     price = request.json['price']
     description = request.json['description']
     image_url = request.json['image_url']
 
-    new_donut = Donut(name, quantity, price, description, image_url)
+    new_donut = Donut(id, name, quantity, price, description, image_url)
 
     db.session.add(new_donut)
     db.session.commit()
