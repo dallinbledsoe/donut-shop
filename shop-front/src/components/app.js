@@ -8,6 +8,8 @@ import {
 
 import Home from "./pages/home";
 import About from "./pages/about";
+import Contact from "./pages/contact";
+import Auth from "./pages/auth";
 
 export default class App extends Component {
   render() {
@@ -24,6 +26,9 @@ export default class App extends Component {
                 <NavLink to="/about" activeClassName="nav-link-active">
                   About
                 </NavLink>
+                <NavLink to="/contact" activeClassName="nav-link-active">
+                  Contact Us
+                </NavLink>
               </div>
               <div className="login">user</div>
             </div>
@@ -32,6 +37,8 @@ export default class App extends Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/auth" component={Auth} />
               </Switch>
             </div>
           </Router>
