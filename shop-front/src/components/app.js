@@ -18,7 +18,9 @@ export default class App extends Component {
         <div className="page-wrapper">
           <Router>
             <div className="navbar">
-              <h1>Donut Shop</h1>
+              <div className="page-title">
+                <h1>Donut Shop</h1>
+              </div>
               <div className="nav-links-wrapper">
                 <NavLink to="/" activeClassName="nav-link-active">
                   Home

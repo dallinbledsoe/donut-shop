@@ -1,17 +1,5 @@
-html {
-  font-size: 62.5%; // 1rem is 10px
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  font-family: "montserrat";
-}
-
 body {
+  margin: 0px;
   overflow-x: hidden;
   font-weight: normal;
 
@@ -22,16 +10,29 @@ body {
 }
 
 .app {
-  margin-top: 2rem;
-  display: grid;
-  justify-items: center;
-
   .page-wrapper {
     width: 100%;
     .navbar {
+      height: 6vh;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       border-bottom: 2px solid blue;
+
+      .page-title {
+        margin-left: 5px;
+      }
+
+      .nav-links-wrapper {
+        width: 30vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .login {
+        margin-right: 5px;
+      }
     }
   }
 }
